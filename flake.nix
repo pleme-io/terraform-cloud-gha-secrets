@@ -2,10 +2,9 @@
   description = "Terraform Cloud and GitHub Actions secrets integration — fetches Akeyless dynamic secrets via JWT auth and provisions them as GitHub Actions secrets";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.follows = "substrate/nixpkgs";
     substrate = {
       url = "github:pleme-io/substrate";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     flake-utils.url = "github:numtide/flake-utils";
   };
